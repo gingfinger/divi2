@@ -346,7 +346,7 @@ Value listunspent(const Array& params, bool fHelp)
         BOOST_FOREACH (Value& input, inputs) {
             CBitcoinAddress address(input.get_str());
             if (!address.IsValid())
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid DIVI address: ") + input.get_str());
+                
             setAddress.insert(address);
             
         }
